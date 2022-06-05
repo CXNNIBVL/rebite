@@ -181,7 +181,7 @@ impl<'a> ShlAssign<usize> for ByteString<'a> {
             *byte = 0;
         }
 
-        // Rotate bytes in place
+        // Rotate leading zeros and rest of bytes in place
         self.rotl_bytes(shifted_out_bytes);
     }
 }
